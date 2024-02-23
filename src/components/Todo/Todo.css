@@ -1,0 +1,28 @@
+.todoitems{
+    display: flex;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 5px;
+}
+
+
+.todospan{
+    text-align: center;
+    border: 1px solid beige;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.editinput{
+    border-radius: 5px;
+    border: none;
+}
+
+.todobtn{
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 10px;
+    font-size: small;
+    letter-spacing: 2px;
+}

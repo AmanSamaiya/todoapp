@@ -1,0 +1,24 @@
+.addContainer{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.addinput{
+    border-radius: 5px;
+    padding: 10px 60px;
+    border: none;
+    font-weight: 600;
+}
+
+
+.addbtn{
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px 30px;
+    font-weight: 600;
+    font-size: large;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
