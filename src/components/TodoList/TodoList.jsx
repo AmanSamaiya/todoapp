@@ -1,8 +1,12 @@
+import { useContext } from "react";
 import Todo from "../Todo/Todo.jsx";
 import "../TodoList/TodoList.css";
+import todoContext from "../../context/todoContext.js";
 
 
-function TodoList({ setTodos , todos }) {
+function TodoList() {
+
+  const { todos , setTodos } = useContext(todoContext);
 
 
   function deleteTodo(id){
