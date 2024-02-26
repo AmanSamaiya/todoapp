@@ -6,7 +6,7 @@ function Todo({ finishtodos, edittodos, deletetodos, text, isFinished, id }) {
 
   const [editText, setEditText] = useState(text);
 
-  const [isStrikethrough, setIsStrikethrough] = useState(false);
+  // const [isStrikethrough, setIsStrikethrough] = useState(false);
 
   return (
     <div className="todoitems">
@@ -15,7 +15,7 @@ function Todo({ finishtodos, edittodos, deletetodos, text, isFinished, id }) {
         checked={isFinished}
         onChange={() => {
           finishtodos(id);
-          setIsStrikethrough(!isStrikethrough);
+          // setIsStrikethrough(!isStrikethrough);
         }}
       />
       {editting ? (
@@ -27,7 +27,7 @@ function Todo({ finishtodos, edittodos, deletetodos, text, isFinished, id }) {
         />
       ) : (
         <span
-          style={{ textDecoration: isStrikethrough ? "line-through" : "none" }}
+          // style={{ textDecoration: isStrikethrough ? "line-through" : "none" }}
           className="todospan"
         >
           {editText}
