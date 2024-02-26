@@ -6,7 +6,7 @@ function Todo({ finishtodos, edittodos, deletetodos, text, isFinished, id }) {
 
   const [editText, setEditText] = useState(text);
 
-  // const [isStrikethrough, setIsStrikethrough] = useState(false);
+  const [isStrikethrough, setIsStrikethrough] = useState(false);
 
   return (
     <div className="todoitems">
@@ -15,7 +15,7 @@ function Todo({ finishtodos, edittodos, deletetodos, text, isFinished, id }) {
         checked={isFinished}
         onChange={() => {
           finishtodos(id);
-          // setIsStrikethrough(!isStrikethrough);
+          setIsStrikethrough(!isStrikethrough);
         }}
       />
       {editting ? (
@@ -25,26 +25,15 @@ function Todo({ finishtodos, edittodos, deletetodos, text, isFinished, id }) {
           className="editinput"
           type="text"
         />
-      ) : (
-        <span
-          // style={{ textDecoration: isStrikethrough ? "line-through" : "none" }}
-          className="todospan"
-        >
-          {editText}
-        </span>
-      )}
-      <button
-        onClick={() => {
+      ) : 
+      (<span style={{ textDecoration: isStrikethrough ? "line-through" : "none" }}className="todospan">{editText}
+      </span>)}
+      <button onClick={() => {
           edittodos(editText, id);
           setIsEditting(!editting);
         }}
-        className="todobtn"
-      >
-        {editting ? "Save" : "Edit"}
-      </button>
-      <button onClick={() => deletetodos(id)} className="todobtn">
-        Delete
-      </button>
+        className="todobtn">{editting ? "Save" : "Edit"}</button>
+      <button onClick={() => deletetodos(id)} className="todobtn">Delete</button>
     </div>
   );
 }

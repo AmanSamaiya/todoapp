@@ -1,17 +1,17 @@
-import { useContext, useState } from "react";
+import { useState } from "react";
 import "../AddTodo/AddTodo.css";
-import todoContext from "../../context/todoContext";
+import { useDispatch } from "react-redux";
 
 function AddTodo() {
 
-  const { todos, dispatch } = useContext(todoContext);
+  const dispatch = useDispatch();
 
   const [todotext, setTodoText] = useState("");
 
 
 
   function addTodo(todotext) {
-   dispatch({type:'add_todo' , payload:{todotext}})
+    if(todotext.length>0) dispatch({type:'add_todo' , payload:{todotext}})
   }
 
   return (
